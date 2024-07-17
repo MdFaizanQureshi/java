@@ -1,0 +1,870 @@
+Q1.WAP program to calculate Simple Interest.
+
+import java.util.Scanner;
+
+public class SimpleInterestCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the principal amount (P): ");
+        float principal = sc.nextFloat();
+
+        System.out.print("Enter the rate of interest (R): ");
+        float rate = sc.nextFloat();
+
+        System.out.print("Enter the time period (T) in years: ");
+        float time = sc.nextFloat();
+
+        // Calculate simple interest
+        float simpleInterest = (principal * rate * time) / 100;
+
+        System.out.println("Simple Interest = " + simpleInterest);
+
+        sc.close();
+    }
+}
+
+
+Q2.WAP program to calculate Simple Interest. 2. WAP to swap two numbers with & without using temp variables.
+
+With temp variable
+
+public class NumberSwapper {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
+
+        System.out.println("Before swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+
+        // Swap using a temporary variable
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
+
+        System.out.println("After swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+    }
+}
+
+Without temp variable
+
+public class NumberSwapper {
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 20;
+
+        System.out.println("Before swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+
+        // Swap without a temporary variable
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
+
+        System.out.println("After swapping:");
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+    }
+}
+
+Q3.WAP program to calculate Perimeter of Circle, Rectangle and Triangle.
+Perimeter of circle
+
+import java.util.Scanner;
+
+public class Perimeter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        double radius = scanner.nextDouble();
+
+        double circlePerimeter = 2 * Math.PI * radius;
+        System.out.println("Perimeter of circle: " + circlePerimeter);
+
+        scanner.close();
+    }
+}
+
+Perimeter of rectangle
+
+import java.util.Scanner;
+
+public class Perimeter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+
+        System.out.print("Enter the breadth of the rectangle: ");
+        double breadth = scanner.nextDouble();
+
+        double rectanglePerimeter = 2 * (length + breadth);
+        System.out.println("Perimeter of rectangle: " + rectanglePerimeter);
+
+        scanner.close();
+    }
+}
+
+Perimeter of triangle
+
+import java.util.Scanner;
+
+public class Perimeter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the first side of the triangle: ");
+        double side1 = scanner.nextDouble();
+
+        System.out.print("Enter the length of the second side of the triangle: ");
+        double side2 = scanner.nextDouble();
+
+        System.out.print("Enter the length of the third side of the triangle: ");
+        double side3 = scanner.nextDouble();
+
+        double trianglePerimeter = side1 + side2 + side3;
+        System.out.println("Perimeter of triangle: " + trianglePerimeter);
+
+        scanner.close();
+    }
+}
+
+Q4.WAP program to find Area of Circle, Rectangle and Triangle.
+Area of circle
+import java.util.Scanner;
+
+public class CircleAreaCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the radius of the circle: ");
+        double radius = scanner.nextDouble();
+
+        double circleArea = Math.PI * Math.pow(radius, 2);
+        System.out.println("Area of the circle: " + circleArea);
+
+        scanner.close();
+    }
+}
+
+Area of rectangle
+import java.util.Scanner;
+
+public class RectangleAreaCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the rectangle: ");
+        double length = scanner.nextDouble();
+
+        System.out.print("Enter the breadth of the rectangle: ");
+        double breadth = scanner.nextDouble();
+
+        double rectangleArea = length * breadth;
+        System.out.println("Area of the rectangle: " + rectangleArea);
+
+        scanner.close();
+    }
+}
+Area of triangle
+
+
+
+import java.util.Scanner;
+
+public class TriangleAreaCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Case 1: Using base and height
+        System.out.print("Enter the base of the triangle: ");
+        double base = scanner.nextDouble();
+
+        System.out.print("Enter the height of the triangle: ");
+        double height = scanner.nextDouble();
+
+        double triangleAreaBaseHeight = (base * height) / 2;
+        System.out.println("Area of the triangle (base and height): " + triangleAreaBaseHeight);
+        scanner.close();
+    }
+}
+
+  Q5.WAP program to find Largest of Three Numbers.
+
+
+import java.util.Scanner;
+
+public class LargestNumberExample2 {
+    public static void main(String[] args) {
+        int a, b, c, largest;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the first number:");
+        a = sc.nextInt();
+        System.out.println("Enter the second number:");
+        b = sc.nextInt();
+        System.out.println("Enter the third number:");
+        c = sc.nextInt();
+
+        largest = c > (a > b ? a : b) ? c : ((a > b) ? a : b);
+
+        System.out.println("The largest number is: " + largest);
+    }
+}
+
+Q6.WAP to convert temperature from Fahrenheit to Celsius
+
+
+
+
+import java.util.Scanner;
+
+public class FahrenheitToCelsiusConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the temperature in Fahrenheit: ");
+        double fahrenheit = scanner.nextDouble();
+
+        // Convert Fahrenheit to Celsius
+        double celsius = (fahrenheit - 32) / 1.8;
+
+        System.out.println("Temperature in Celsius: " + celsius);
+
+        scanner.close();
+    }
+}
+
+Q7.Write a program to accept the initial letter of the name & to display the friends name by using switch statements.
+import java.util.Scanner;
+
+public class FriendNameDisplay {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the initial letter of your friend's name: ");
+        char initialLetter = scanner.next().charAt(0);
+
+        switch (initialLetter) {
+            case 'A':
+                System.out.println("Friend's name: Alice");
+                break;
+            case 'B':
+                System.out.println("Friend's name: Bob");
+                break;
+            case 'C':
+                System.out.println("Friend's name: Carol");
+                break;
+            // Add more cases for other letters as needed
+            default:
+                System.out.println("No friend found with that initial letter.");
+        }
+
+        scanner.close();
+    }
+}
+
+Q8.Write a program to display a greeting message according to Marks obtained by students.
+import java.util.Scanner;
+
+public class GreetingBasedOnMarks {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the student's marks: ");
+        int marks = scanner.nextInt();
+
+        switch (marks / 10) {
+            case 10:
+            case 9:
+            case 8:
+                System.out.println("Excellent!");
+                break;
+            case 7:
+                System.out.println("Very Good!");
+                break;
+            case 6:
+                System.out.println("Good!");
+                break;
+            case 5:
+                System.out.println("Work Hard!");
+                break;
+            case 4:
+                System.out.println("Poor!");
+                break;
+            case 3:
+            case 2:
+            case 1:
+            case 0:
+                System.out.println("Very Poor!");
+                break;
+            default:
+                System.out.println("Invalid value entered.");
+        }
+
+        scanner.close();
+    }
+}
+
+Q9.Write a program to display a greeting message according to the percentage obtained by students.
+import java.util.Scanner;
+
+public class GreetingBasedOnPercentage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the student's percentage: ");
+        double percentage = scanner.nextDouble();
+
+        if (percentage >= 90) {
+            System.out.println("Excellent! Keep up the great work!");
+        } else if (percentage >= 80) {
+            System.out.println("Very Good! You're doing well!");
+        } else if (percentage >= 70) {
+            System.out.println("Good! Keep improving!");
+        } else if (percentage >= 60) {
+            System.out.println("Work Hard! You can do better!");
+        } else {
+            System.out.println("Keep striving for improvement!");
+        }
+
+        scanner.close();
+    }
+}
+
+Q10.WAP program to print ODD Numbers from 1 to N
+import java.util.Scanner;
+
+public class OddNumbers2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please enter a number (N): ");
+        int number = sc.nextInt();
+
+        for (int i = 1; i <= number; i += 2) {
+            System.out.print(i + "\t");
+        }
+        sc.close();
+    }
+}
+
+Q11.WAP to find sum of digits of entered number.
+import java.util.Scanner;
+
+public class SumOfDigitsExample2 {
+    public static void main(String[] args) {
+        long number, sum = 0;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        number = sc.nextLong();
+
+        // Execute until the condition 'number != 0' becomes false
+        for (; number != 0; number /= 10) {
+            sum += number % 10; // Find the last digit and add it to the variable 'sum'
+        }
+
+        System.out.println("Sum of digits: " + sum);
+    }
+}
+
+Q12.Write a program to display the following output. (Note : PF=0.15*basic sal DA=0.10*basic sal)
+
+import java.util.Scanner;
+
+public class SalaryCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String empName = scanner.nextLine();
+
+        System.out.print("Enter the basic salary: ");
+        double basicSalary = scanner.nextDouble();
+
+        // Calculate PF and DA
+        double pf = 0.15 * basicSalary;
+        double da = 0.10 * basicSalary;
+
+        // Calculate net salary
+        double netSalary = basicSalary - pf + da;
+
+        // Display the output
+        System.out.println("Emp Name : " + empName);
+        System.out.println("Basic Sal  : " + basicSalary);
+        System.out.println("PF        : " + pf);
+        System.out.println("DA        : " + da);
+        System.out.println("Net Sal   : " + netSalary);
+
+        scanner.close();
+    }
+}
+
+Q13..Write a program to Find whether a number is Prime or Not.
+import java.util.Scanner;
+
+public class PrimeNumberCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+        boolean flag = false;
+
+        for (int i = 2; i <= num / 2; ++i) {
+            if (num % i == 0) {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(num + " is a prime number.");
+        else
+            System.out.println(num + " is not a prime number.");
+    }
+}
+
+Q14..Program to display first n prime numbers. Accept n from the user.
+import java.util.Scanner;
+
+public class PrimeNumbersWhile {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of N: ");
+        int N = scanner.nextInt();
+        int count = 0; // Counter for prime numbers
+        int num = 2; // Start checking from 2
+
+        System.out.println("First " + N + " prime numbers:");
+
+        while (count < N) {
+            boolean isPrime = true;
+
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(num + " ");
+                count++;
+            }
+
+            num++;
+        }
+
+        scanner.close();
+    }
+}
+
+Q15.WAP program to create Mini Calculator.
+import java.util.Scanner;
+
+public class MiniCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Choose an operator (+, -, *, or /): ");
+        char operator = scanner.next().charAt(0);
+
+        System.out.print("Enter the first number: ");
+        double number1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double number2 = scanner.nextDouble();
+
+        double result;
+
+        switch (operator) {
+            case '+':
+                result = number1 + number2;
+                System.out.println(number1 + " + " + number2 + " = " + result);
+                break;
+            case '-':
+                result = number1 - number2;
+                System.out.println(number1 + " - " + number2 + " = " + result);
+                break;
+            case '*':
+                result = number1 * number2;
+                System.out.println(number1 + " * " + number2 + " = " + result);
+                break;
+            case '/':
+                if (number2 != 0) {
+                    result = number1 / number2;
+                    System.out.println(number1 + " / " + number2 + " = " + result);
+                } else {
+                    System.out.println("Error: Division by zero!");
+                }
+                break;
+            default:
+                System.out.println("Invalid operator!");
+        }
+
+        scanner.close();
+    }
+}
+
+Q16.Write a Java program to convert a binary number to hexadecimal number.
+import java.util.Scanner;
+
+public class BinaryToHexadecimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a binary number: ");
+        long binary = scanner.nextLong();
+
+        // Convert binary to decimal
+        int decimalNumber = binaryToDecimal(binary);
+
+        // Convert decimal to hexadecimal
+        String hexadecimal = Integer.toHexString(decimalNumber);
+
+        System.out.println("Hexadecimal representation: " + hexadecimal);
+
+        scanner.close();
+    }
+
+    // Method to convert binary to decimal
+    static int binaryToDecimal(long binary) {
+        int decimalNumber = 0;
+        int i = 0;
+
+        while (binary > 0) {
+            decimalNumber += Math.pow(2, i) * (binary % 10);
+            binary /= 10;
+            i++;
+        }
+
+        return decimalNumber;
+    }
+}
+
+Q17.WAP program to transpose a Matrix.
+public class MatrixTransposeExample {
+    public static void main(String[] args) {
+        // Creating a matrix
+        int original[][] = {
+            {1, 3, 4},
+            {2, 4, 3},
+            {3, 4, 5}
+        };
+
+        // Creating another matrix to store the transpose
+        int transpose[][] = new int[3][3]; // 3 rows and 3 columns
+
+        // Code to transpose the matrix
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                transpose[i][j] = original[j][i];
+            }
+        }
+
+        System.out.println("Matrix without transpose:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(original[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Matrix after transpose:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(transpose[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Q18.Write a program to accept student information such as roll number, name and marks in physics, chemistry and math using class. And to display that information along with the result as ‘ You are eligible’ if marks in all subjects > 60 otherwise display ‘You are not eligible’.
+import java.util.Scanner;
+
+class Student {
+    int rollNumber;
+    String name;
+    double physicsMarks;
+    double chemistryMarks;
+    double mathMarks;
+
+    void inputDetails() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter roll number: ");
+        rollNumber = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        System.out.print("Enter student name: ");
+        name = scanner.nextLine();
+        System.out.print("Enter marks in Physics: ");
+        physicsMarks = scanner.nextDouble();
+        System.out.print("Enter marks in Chemistry: ");
+        chemistryMarks = scanner.nextDouble();
+        System.out.print("Enter marks in Math: ");
+        mathMarks = scanner.nextDouble();
+        scanner.close();
+    }
+
+    void displayResult() {
+        if (physicsMarks > 60 && chemistryMarks > 60 && mathMarks > 60) {
+            System.out.println("Congratulations, " + name + "! You are eligible.");
+        } else {
+            System.out.println("Sorry, " + name + ". You are not eligible.");
+        }
+    }
+}
+
+public class StudentEligibility {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.inputDetails();
+        student.displayResult();
+    }
+}
+
+Q19..Write a program to appoint a driver by checking following conditions:
+a) Person having their driving license.
+b) If the person is male then his age should be between 25 to 50
+c) If the person is female then her age should be between 30 to 50
+
+import java.util.Scanner;
+
+public class DriverAppointment {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the person's gender (M/F): ");
+        char gender = scanner.next().charAt(0);
+
+        System.out.print("Enter the person's age: ");
+        int age = scanner.nextInt();
+
+        System.out.print("Does the person have a valid driving license? (true/false): ");
+        boolean hasLicense = scanner.nextBoolean();
+
+        if (hasLicense) {
+            if ((gender == 'M' && age >= 25 && age <= 50) || (gender == 'F' && age >= 30 && age <= 50)) {
+                System.out.println("Driver appointed!");
+            } else {
+                System.out.println("Driver does not meet the age criteria.");
+            }
+        } else {
+            System.out.println("Driver must have a valid driving license.");
+        }
+
+        scanner.close();
+    }
+}
+
+Q20..WAP program to add Two Matrices.
+
+import java.util.Scanner;
+
+public class MatrixAdditionUserInput {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+
+        int a[][] = new int[rows][columns];
+        int b[][] = new int[rows][columns];
+        int c[][] = new int[rows][columns];
+
+        System.out.println("Enter elements of the first matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                a[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("Enter elements of the second matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                b[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Adding matrices
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                c[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        System.out.println("Sum of matrices:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println(); // New line
+        }
+
+        scanner.close();
+    }
+}
+
+Q21..Write a Java program to sum values of an array.
+import java.util.Scanner;
+
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements in the array: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum += arr[i];
+        }
+
+        System.out.println("Sum of the elements in the array: " + sum);
+
+        scanner.close();
+    }
+}
+
+Q22.Write a Java program to sort (ascending and descending) a numeric array.
+
+Ascending order-
+
+import java.util.Arrays;
+
+public class ArraySortingAscending {
+    public static void main(String[] args) {
+        int[] numbers = { 90, 23, 5, 109, 12, 22, 67, 34 };
+
+        // Sort the array in ascending order
+        Arrays.sort(numbers);
+
+        System.out.println("Elements of the array sorted in ascending order:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+Descending order-
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ArraySortingDescending {
+    public static void main(String[] args) {
+        Integer[] numbers = { 90, 23, 5, 109, 12, 22, 67, 34 };
+
+        // Sort the array in descending order
+        Arrays.sort(numbers, Comparator.reverseOrder());
+
+        System.out.println("Elements of the array sorted in descending order:");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+Q23..Write a Java program to find the largest element in an array.
+
+public class LargestElementInArray {
+    public static void main(String[] args) {
+        int[] numbers = { 90, 23, 5, 109, 12, 22, 67, 34 };
+
+        // Find the largest element in the array
+        int largest = numbers[0];
+        for (int num : numbers) {
+            if (num > largest) {
+                largest = num;
+            }
+        }
+
+        System.out.println("The largest element in the array is: " + largest);
+    }
+}
+
+Q24..Write a program to find whether given no. is Armstrong or not.
+
+import java.util.Scanner;
+
+public class ArmstrongNumberCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int number = scanner.nextInt();
+
+        // Calculate the number of digits in the given number
+        int originalNumber = number;
+        int numDigits = 0;
+        while (originalNumber != 0) {
+            originalNumber /= 10;
+            numDigits++;
+        }
+
+        // Calculate the sum of digits raised to the power of numDigits
+        originalNumber = number;
+        int sum = 0;
+        while (originalNumber != 0) {
+            int digit = originalNumber % 10;
+            sum += Math.pow(digit, numDigits);
+            originalNumber /= 10;
+        }
+
+        // Check if the number is an Armstrong number
+        if (sum == number) {
+            System.out.println(number + " is an Armstrong number.");
+        } else {
+            System.out.println(number + " is not an Armstrong number.");
+        }
+
+        scanner.close();
+    }
+}
+
+Q25.WAPto merge two arrays.
+
+public class MergeTwoArrays {
+    public static void main(String[] args) {
+        int[] arr1 = { 1, 3, 4, 5 };
+        int[] arr2 = { 2, 4, 6, 8 };
+
+        // Determine the length of the merged array
+        int len1 = arr1.length;
+        int len2 = arr2.length;
+        int lenMerged = len1 + len2;
+
+        // Create the merged array
+        int[] mergedArray = new int[lenMerged];
+
+        // Copy elements from arr1 to mergedArray
+        System.arraycopy(arr1, 0, mergedArray, 0, len1);
+
+        // Copy elements from arr2 to mergedArray
+        System.arraycopy(arr2, 0, mergedArray, len1, len2);
+
+        // Print the merged array
+        System.out.print("Merged array: ");
+        for (int num : mergedArray) {
+            System.out.print(num + " ");
+        }
+    }
+}
