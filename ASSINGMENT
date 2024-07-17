@@ -62,7 +62,7 @@ public class NumberSwapper {
 
         // Swap without a temporary variable
         num1 = num1 + num2;
-        num2 = num2 - num1;
+        num2 = num1 - num2;
         num1 = num1 - num2;
 
         System.out.println("After swapping:");
